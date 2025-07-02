@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDET</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="NavBar">
+        <ul>
+            <li id="CreateLoc" onclick="Display()">CreateLocator</li>
+            <li>LocateTheWebElement</li>
+            <li>AddValidation</li>
+            <li>CreateReusableFunction</li>
+            <li>CreateReusableScenrio</li>
+            <li>CreateTestDataFile</li>
+            <li>CreateTestNgTest</li>
+    </ul>
+    </div>
+    <div class="bodycontent">
+        <div class="CreateLocCard">
+            <span>Create Locator</span>
+            
+            <input type="text" placeholder="Enter Key" name="keyName">
+            <input type="text" placeholder="Enter Locator Value" name="LocVal">
+            
+            <button>Add</button>
+            <button>Locate</button>
+           
+            </div>
+        </div>
+        <div class="LocWebEle">
+            <input type="text" placeholder="Search Locator">
+            <button>Locate</button>
+            <input type="text" placeholder="Enter TestData">
+            <button>AddToTestData</button>
+
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

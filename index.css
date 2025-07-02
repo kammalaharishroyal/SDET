@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    margin: 10px;
+    padding: 5px;
+}
+.NavBar{
+    background-color: rgb(92, 47, 237);
+    margin-bottom: 10px;
+    border-radius: 20px;
+    color: white;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+}
+ul>li{
+    font-size: small;
+    list-style: none;
+    margin: 1%;
+    padding: 1%;
+    border-radius: 40px;
+    font-weight: bolder;
+    cursor: pointer;   
+}
+ul>li:hover{
+box-shadow: 3px 1px 10px 3px;
+color: black;
+font-weight: 600;
+background-color: aliceblue;
+}
+ul>li::selection{
+    color: orangered;
+    
+}
+.CreateLocCard{
+    display: none;
+    height: 200px;
+    width: 20%;
+    border: 1px solid lightgray ;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px  lightgray;
+}
+.CreateLocCard>span{
+    display: block;
+    font-size: larger;
+    font-weight: 800;
+    text-align: center;
+    font-weight: bolder;
+    
+}
+.CreateLocCard>input{
+    display: block;
+    text-align: center;
+    margin: 10px 10px;
+    padding: 10px 5px;
+    width: 80%;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 20px;
+    
+}
+.CreateLocCard>button{
+    display: inline-block;
+    width: 40%;
+    padding: 5% 10%;
+    background-color: rgb(107, 216, 107);
+    border-radius: 30px;
+    cursor: pointer;
+}
