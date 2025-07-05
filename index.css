@@ -115,17 +115,18 @@ ul>li::selection{
 .Addedfunc{
     width: 90%;
     margin: 10px 0px;
-    position: relative;
+    
 }
 .Addedfunc>span{
     padding: 10px 5px;
     font-weight: bolder;
-    width: 80%;
+    width: 75%;
     text-align: center;
     background-color: blue;
     color: white;
     font-size: small;
     border-radius: 20px;
+    display: inline-block;
 }
 .Addedfunc>i{
     padding: 10px 5px;
