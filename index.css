@@ -7,6 +7,9 @@ body{
     margin: 10px;
     padding: 5px;
 }
+#Test{
+    width: 100%;
+}
 button{
     background-color: green;
     cursor: pointer;
@@ -69,20 +72,103 @@ ul>li::selection{
     
 }
 .bodycontent>div{
-    height: 400px;
+    min-height: 400px;
     width: 30%;
     box-shadow: 5px 5px 20px  lightgray;
     padding: 25px 20px;
     border-radius: 10px;
     margin: 20px 0px;
 }
-.bodycontent>div:hover{
+/* .bodycontent>div:hover{
     box-shadow: 5px 5px 20px  rgb(101, 98, 98);
-}
+} */
 .CreateLocCard>span{
     display: block;
     font-size: larger;
     font-weight: 800;
     text-align: center;
     font-weight: bolder;
+}
+#Callable>h2{
+     text-align: center;
+    box-shadow: 1px 1px 5px lightgray;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: orange;
+    padding: 5px 0px;
+}
+.func{
+   border: 1px solid;
+   display: inline-block;
+   padding: 5px 10px;
+   font-weight: bold;
+   background-color: green;
+   color: white;
+   border-radius: 20px;
+   text-align: center;
+   
+}
+.func>i{
+    cursor: pointer;
+
+}
+.Addedfunc{
+    width: 90%;
+    margin: 10px 0px;
+    position: relative;
+}
+.Addedfunc>span{
+    padding: 10px 5px;
+    font-weight: bolder;
+    width: 80%;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    font-size: small;
+    border-radius: 20px;
+}
+.Addedfunc>i{
+    padding: 10px 5px;
+    width: 10%;
+    
+    
+    color:red ;
+    
+    text-align: center;
+    border-radius: 10px;
+}
+.Addedfunc>i:hover{
+    cursor: pointer;
+}
+#Methods>h2{
+    text-align: center;
+    box-shadow: 1px 1px 5px lightgray;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: chartreuse;
+    padding: 5px 0px;
+}
+#TestData>h2{
+    text-align: center;
+    box-shadow: 1px 1px 5px lightgray;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: cadetblue;
+    padding: 5px 0px;
+}
+.Data{
+    margin-bottom: 10px;
+}
+.Data>span{
+    padding: 5px;
+    justify-content: center;
+    box-shadow: 1px 1px 10px lightgray;
+    border-radius: 10px;
+    
+}
+.Data>span:first-child{
+color: cornflowerblue;
+}
+.Data>span:last-child{
+color: darkgoldenrod;
 }

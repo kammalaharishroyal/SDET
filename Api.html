@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Call Spring Boot API</title>
+</head>
+<body>
+  <h2>Click the button to call Spring Boot REST API</h2>
+  <button onclick="callApi()">Call API</button>
+  <p id="response"></p>
+
+  <script>
+    function callApi() {
+      fetch("http://localhost:8081/api/hello")
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.text(); // or use response.json() for JSON response
+        })
+        .then(data => {
+          document.getElementById("response").textContent = data;
+        })
+        .catch(error => {
+          console.error("Error:", error);
+          document.getElementById("response").textContent = "Failed to call API";
+        });
+    }
+  </script>
+</body>
+</html>

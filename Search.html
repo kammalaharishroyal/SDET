@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search and Select</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #searchBox {
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    #results {
+      border: 1px solid #ccc;
+      width: 300px;
+      max-height: 150px;
+      overflow-y: auto;
+      position: absolute;
+      background-color: white;
+    }
+    .result-item {
+      padding: 8px;
+      cursor: pointer;
+    }
+    .result-item:hover {
+      background-color: #f0f0f0;
+    }
+    #details {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      width: 320px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Search Vegetables</h2>
+
+<input type="text" id="searchBox" placeholder="Search..." oninput="searchData()" />
+<div id="results"></div>
+
+<div id="details"></div>
+
+<script>
+  // Sample data (you can also fetch this from backend)
+  const data = [
+    {
+      name: "LoginPage",
+      Functions:["Login","Logout"]
+    },
+    {
+      name: "MemberSearch",
+       Functions:["EnterMemberSearchDeatils","ClickOnSearchButton"]
+    },
+    {
+      name: "CreateEpisode",
+     Functions:["CreateCM","CreateDM"]
+    },
+    {
+      name: "ActivityPage",
+      Functions:["AddActivity","AddIntertion"]
+    }
+  ];
+
+  function searchData() {
+    const query = document.getElementById("searchBox").value.toLowerCase();
+    const resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = "";
+
+    if (query === "") return;
+
+    const matches = data.filter(item => item.name.toLowerCase().includes(query));
+
+    matches.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "result-item";
+      div.textContent = item.name;
+      div.onclick = () => showDetails(item);
+      resultsDiv.appendChild(div);
+    });
+  }
+
+  function showDetails(item) {
+    document.getElementById("results").innerHTML = ""; // clear suggestions
+    document.getElementById("searchBox").value = item.name;
+    const element = document.createElement("div");
+    element.classList.add("card");
+    item.Functions.map(x=>{
+        const ele=document.createElement("div");
+        ele.textContent=x
+element.appendChild(ele)
+    })
+    const detailsDiv = document.getElementById("details");
+    detailsDiv.innerHTML = `
+      <h3>${item.name}</h3>
+      ${element}
+    `;
+  }
+</script>
+
+</body>
+</html>

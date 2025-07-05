@@ -1,54 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SDET</title>
-    <link rel="stylesheet" href="./index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <div class="NavBar">
-        <ul>
-            <li id="CreateLoc" onclick="Display()">CreateLocator</li>
-            <li>LocateTheWebElement</li>
-            <li>AddValidation</li>
-            <li>CreateReusableFunction</li>
-            <li>CreateReusableScenrio</li>
-            <li>CreateTestDataFile</li>
-            <li>CreateTestNgTest</li>
-    </ul>
+      <ul>
+        <li>LaunchDriver</li>
+        <li id="CreateLoc" onclick="Display()">CreateLocator</li>
+        <li>CallReusable</li>
+        <li>LocateTheWebElement</li>
+        <li>AddValidation</li>
+        <li>CreateReusableFunction</li>
+        <li>CreateReusableScenrio</li>
+        <li>CreateTestDataFile</li>
+        <li>CreateTestNgTest</li>
+      </ul>
     </div>
     <div class="bodycontent">
-        <div class="CreateLocCard">
-            <span>Create Locator</span>
-            
-            <input type="text" placeholder="Enter Key" name="keyName">
-            <input type="text" placeholder="Enter Locator Value" name="LocVal">
-            
-            <button>Add</button>
-            <button>Locate</button>
-           
-           
-        </div>
-        <div class="LocWebEle">
-            <input type="text" placeholder="Search Locator">
-             <button>BuildLoc</button>
-            <button>Locate</button>
-            <input type="text" placeholder="Enter TestData">
-            <button>AddToTestData</button>
+      <div id="Callable">
+        <h2 for="">Add Resuble Function</h2>
+        <input type="text" placeholder="Search Page" />
+        <div id="functions">
+          <div class="func">
+            <span id="LogInToNp">LogInToNp</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogOut">LogOut</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogInToNp">Log</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogOut">LogOut</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
 
+          <div class="func">
+            <span id="LogInToNp">LogInToNp</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogOut">LogOut</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogInToNp">Log</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogOut">LogOut</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+
+          <div class="func">
+            <span id="LogInToNp">LogInToNp</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogOut">LogOut</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogInToNp">Log</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogOut">LogOut</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+
+          <div class="func">
+            <span id="LogInToNp">LogInToNp</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogOut">LogOut</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogInToNp">Log</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogOut">LogOut</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+
+          <div class="func">
+            <span id="LogInToNp">LogInToNp</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogOut">LogOut</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogInToNp">Log</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogOut">LogOut</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+
+          <div class="func">
+            <span id="LogInToNp">LogInToNp</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogOut">LogOut</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogInToNp">Log</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogOut">LogOut</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+
+          <div class="func">
+            <span id="LogInToNp">LogInToNp</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogOut">LogOut</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogInToNp">Log</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="func">
+            <span id="LogOut">LogOut</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
         </div>
-    
-        <div class="AddValidation">
-            <button>FromTestData</button>
-            <button>AddData</button>
-            <input type="text" placeholder="Validation Text">
+      </div>
+      <div id="Methods">
+        <h2>TestMethod</h2>
+        <div class="Addedfunc">
+          <span id="LogOut">LogOutLogLLogOutLogOutL</span>
+          <i class="fa-solid fa-minus"></i>
+          <i class="fa-solid fa-play"></i>
         </div>
-       <div></div>
-       <div></div>
-       <div></div>
+        <div class="Addedfunc">
+          <span id="LogOut">LogOutLogLLogOutLogOutL</span>
+          <i class="fa-solid fa-minus"></i>
+          <i class="fa-solid fa-play"></i>
+        </div>
+      </div>
+      <div id="TestData">
+        <h2 for="">TestData</h2>
+        <div class="Data">
+            <span>Lgn_UsrName_tx</span>
+            <i class="fa-solid fa-arrow-right"></i>
+            <span>Seladmin</span>
+        </div>
+        <div class="Data">
+            <span>Lgn_UsrName_tx</span>
+            <i class="fa-solid fa-arrow-right"></i>
+            <span>Seladmin</span>
+        </div>
+        <div class="Data">
+            <span>Lgn_UsrName_tx</span>
+            <i class="fa-solid fa-arrow-right"></i>
+            <span>Seladmin</span>
+        </div>
+      </div>
+      <div class="CreateLocCard">
+        <span>Create Locator</span>
+
+        <input type="text" placeholder="Enter Key" name="keyName" />
+        <input type="text" placeholder="Enter Locator Value" name="LocVal" />
+
+        <button>Add</button>
+        <button>Locate</button>
+      </div>
+      <div class="LocWebEle">
+        <input type="text" placeholder="Search Locator" />
+        <button>BuildLoc</button>
+        <button>Locate</button>
+        <input type="text" placeholder="Enter TestData" />
+        <button>AddToTestData</button>
+      </div>
+
+      <div class="AddValidation">
+        <button>FromTestData</button>
+        <button>AddData</button>
+        <input type="text" placeholder="Validation Text" />
+      </div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-    
+
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>
