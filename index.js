@@ -50,3 +50,12 @@ document.querySelectorAll('.func > i').forEach(icon => {
     getParentInfo(this);
   };
 });
+
+
+document.body.addEventListener("click", function(e) {
+  if (e.target.classList.contains("fa-minus")) {
+    e.target.parentElement.remove();
+  }
+});
+
+

@@ -173,3 +173,7 @@ color: cornflowerblue;
 .Data>span:last-child{
 color: darkgoldenrod;
 }
+.Addedfunc>i{
+    border: 1px solid gray;
+    background-color: orange;
+}
