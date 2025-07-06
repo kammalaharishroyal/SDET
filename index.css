@@ -3,10 +3,6 @@
     padding: 0px;
     box-sizing: border-box;
 }
-body{
-    margin: 10px;
-    padding: 5px;
-}
 #Test{
     width: 100%;
 }
@@ -36,16 +32,20 @@ input{
 .NavBar{
     background-color: rgb(92, 47, 237);
     margin-bottom: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     color: white;
+    position: fixed;
+    width: 100%;
+    border: 1px solid;
+    top: 0px;
 }
-ul{
+.NavBar>ul{
     display: flex;
     justify-content: space-around;
    
 }
-ul>li{
-    font-size: small;
+.NavBar>ul>li{
+    font-size: 10px;
     list-style: none;
     margin: 1%;
     padding: 1%;
@@ -53,13 +53,13 @@ ul>li{
     font-weight: bolder;
     cursor: pointer;   
 }
-ul>li:hover{
+.NavBar>ul>li:hover{
 box-shadow: 3px 1px 10px 3px;
 color: black;
-font-weight: 600;
+/* font-weight: 600; */
 background-color: aliceblue;
 }
-ul>li::selection{
+.NavBar>ul>li::selection{
     color: orangered;
     
 }
@@ -67,7 +67,7 @@ ul>li::selection{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 20px;
+    margin-top: 60px;
    flex-wrap: wrap;
     
 }
@@ -176,4 +176,31 @@ color: darkgoldenrod;
 .Addedfunc>i{
     border: 1px solid gray;
     background-color: orange;
+}
+#ObjRep{
+    width: 100%;
+}
+#ObjRep>h2{
+     text-align: center;
+     border-radius: 5px;
+     margin-bottom: 20px;
+     background-color: black;
+     padding: 5px 0px; 
+     color: white;
+     box-shadow: 1px 1px 5px rgb(205, 28, 28);
+    }
+#ObjRep>table{
+    border: 1px solid;
+    width: 100%;
+}
+#ObjRep>table th{
+    background-color: orange;
+    padding: 10px 5px;
+
+}
+#ObjRep>table td{
+    text-align: center;
+    border: 1px solid;
+    border-bottom: 1px solid;
+    padding: 10px 5px;
 }
