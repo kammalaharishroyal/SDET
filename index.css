@@ -204,3 +204,19 @@ color: darkgoldenrod;
     border-bottom: 1px solid;
     padding: 10px 5px;
 }
+#ObjRep>table td:nth-child(3)::after{
+  content: "\f04b"; /* Unicode for 'fa-play' */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900; /* Required for solid style icons */
+  color: #6032eb;
+  animation: fa-fade 2s infinite;
+  margin: 8px;
+  cursor: pointer;
+}
+
+/* Optional: mimic Font Awesome's fade animation */
+@keyframes fa-fade {
+  0%   { opacity: 0.4; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.4; }
+}
