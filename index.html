@@ -205,10 +205,11 @@
       <div id="ObjRep">
         <h2>ObjectRepository</h2>
         <section>
-          <input type="text" placeholder="searchPage">
-          <button>Search</button>
-          <button>DisplayAll</button>
+          <input type="text" id="searchInput" placeholder="searchPage" oninput="filterFiles()">
+          <button>FetchOr</button>
         </section>
+        <div id="fileList"></div>
+        <div id="selectedFiles"></div>
         <table>
           <thead>
             <th>File</th>
@@ -413,10 +414,66 @@
         </table>
       
       </div>
-      <div></div>
+      <div id="TestNg">
+        <h2>TestNg Tests</h2>
+        <input type="text" name="" id="" placeholder="Search">
+        <button>Search</button>
+        <button>DisplayAll</button>
+        <table>
+          <thead>
+            <th>Class</th>
+            <th>TestName</th>
+            <th>Author</th>
+            <th>CreatedDate</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>LoginPage</td>
+              <td>EnterLoginDetail</td>
+              <td>lgn_userName_tx</td>
+              <td>xpath;//input[@name='__ac_pw_'</td>
+            </tr>
+            <tr>
+              <td>LoginPage</td>
+              <td>EnterLoginDetail</td>
+              <td>lgn_userName_tx</td>
+              <td>xpath;//input[@name='__ac_pw_'</td>
+            </tr>
+            </tbody>
+            </table>
+      </div>
+      <div id="TestNg">
+        <h2>Reusable Methods</h2>
+        <input type="text" name="" id="" placeholder="Search">
+        <button>Search</button>
+        <button>DisplayAll</button>
+        <table>
+          <thead>
+            <th>Page</th>
+    
+            <th>MethodName</th>
+            <th>Description</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>LoginPage</td>
+              <td>EnterLoginDetail</td>
+              <td>lgn_userName_tx</td>
+           
+            </tr>
+            <tr>
+              <td>LoginPage</td>
+              <td>EnterLoginDetail</td>
+              <td>lgn_userName_tx</td>
+              
+            </tr>
+            </tbody>
+            </table>
+      </div>
       <div></div>
     </div>
 
     <script src="./index.js"></script>
+    <script src="./objectRepo.js"></script>
   </body>
 </html>

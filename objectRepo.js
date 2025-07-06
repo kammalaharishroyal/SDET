@@ -1,44 +1,92 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Search and Select File Data</title>
-  <style>
-    body { font-family: Arial; padding: 20px; }
-    .filename { cursor: pointer; margin: 5px 0; color: blue; }
-    .filename:hover { text-decoration: underline; }
-    .selected-tag {
-      display: inline-block;
-      background: #e0e0e0;
-      padding: 5px 10px;
-      margin: 5px;
-      border-radius: 5px;
+const ObjRepo={
+    "Data":[
+        {
+            "FileName":"Lgn.json",
+            "values":{
+                "EnterLoginDetails":[
+                    {
+                    "Lgn_userName_tx":"xpath;//input[@name='__ac_pw__']",
+                    "Lgn_Pw_tx":"xpath;//input[@name='__ac_pwd__']"
+                }
+                ],
+                "EnterMemDetails":[
+                    {
+                    "Lgn_userName_tx":"xpath;//input[@name='__ac_pw__']",
+                    "Lgn_Pw_tx":"xpath;//input[@name='__ac_pwd__']"
+                }
+                ]
+                
+            }
+        },
+        {
+            "FileName":"Harish.json",
+            "values":{
+                "EnterLoginDetails":[
+                    {
+                    "Lgn_userName_tx":"xpath;//input[@name='__ac_pw__']",
+                    "Lgn_Pw_tx":"xpath;//input[@name='__ac_pwd__']"
+                }
+                ],
+                "EnterMemDetails":[
+                    {
+                    "Lgn_userName_tx":"xpath;//input[@name='__ac_pw__']",
+                    "Lgn_Pw_tx":"xpath;//input[@name='__ac_pwd__']"
+                }
+                ]
+                
+            }
+        }
+       
+    ]
+}
+
+
+// 1. Get reference to the table body or table
+const table = document.getElementById("ObjRep");
+let bodyData=table.getElementsByTagName("tbody");
+// 2. Create a new table row
+// const tr = document.createElement("tr");
+// 3. Define the cell values
+
+
+// 4. Loop through values and create <td> for each
+
+
+// 5. Append the row to the table
+
+
+
+ObjRepo.Data.forEach(filData=>{
+    const fname=filData.FileName;
+    const dat=filData.values;
+    // console.log(fname,"=",dat);
+    for(let k in dat){
+        // console.log(k,"=",dat[k]);
+        dat[k].forEach(x=>{
+            for(let locKey in x){
+                const tr = document.createElement("tr");
+                console.log(fname,k,locKey,"=",x[locKey]);
+                const cells = [fname,k,locKey,x[locKey]];
+                // console.log(cells);
+                cells.forEach(text => {
+                const td = document.createElement("td");
+                td.textContent = text;
+                tr.appendChild(td);
+                console.log(tr);
+                bodyData[0].appendChild(tr);
+});
+
+                
+            }
+            
+        })
+        
     }
-    .remove-btn {
-      color: red;
-      margin-left: 8px;
-      cursor: pointer;
-    }
-    #results { margin-top: 20px; white-space: pre-wrap; background: #f9f9f9; padding: 10px; border: 1px solid #ccc; }
-  </style>
-</head>
-<body>
+    
 
-<h2>🔍 Search File Data</h2>
+})
 
-<input type="text" id="searchInput" placeholder="Type filename..." oninput="filterFiles()" />
-<div id="fileList"></div>
 
-<h3>✅ Selected Files</h3>
-<div id="selectedFiles"></div>
-
-<br>
-<button onclick="showResults()">🔎 Show Selected Results</button>
-
-<h3>📋 Results</h3>
-<div id="results"></div>
-
-<script>
-// Sample JSON data
 const jsonData = {
   "Data": [
     {
@@ -171,7 +219,3 @@ function showResults() {
     resultsDiv.innerText += output;
   });
 }
-</script>
-
-</body>
-</html>
