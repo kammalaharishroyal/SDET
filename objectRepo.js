@@ -54,7 +54,8 @@ let bodyData=table.getElementsByTagName("tbody");
 
 // 5. Append the row to the table
 
-
+function FetchAll(){
+  
 
 ObjRepo.Data.forEach(filData=>{
     const fname=filData.FileName;
@@ -86,6 +87,7 @@ ObjRepo.Data.forEach(filData=>{
 
 })
 
+}
 
 const jsonData = {
   "Data": [
@@ -191,31 +193,55 @@ function renderSelectedFiles() {
     selectedDiv.appendChild(span);
   });
 }
+let tableInfo = document.getElementById("ObjRep");
+let bodyDataInfo=tableInfo.getElementsByTagName("tbody");
+// console.log("bodyDataInfo:"+bodyDataInfo[0].tagName);
 
 function showResults() {
-  const resultsDiv = document.getElementById("results");
-  resultsDiv.innerHTML = "";
+  let tableInfo = document.getElementById("ObjRep");
+let bodyDataInfo=tableInfo.getElementsByTagName("tbody");
+  console.log("Shpow res fun"+bodyDataInfo[0].tagName);
+  
+  // const resultsDiv = document.getElementById("");
+  // resultsDiv.innerHTML = "";
 
-  if (selectedIndices.length === 0) {
-    resultsDiv.innerText = "No files selected.";
-    return;
-  }
-
+  // if (selectedIndices.length === 0) {
+  //   resultsDiv.innerText = "No files selected.";
+  //   return;
+  // }
+console.log("Shpow res fun 2"+bodyDataInfo[0].tagName);
   selectedIndices.forEach(index => {
     const fileData = jsonData.Data[index];
     let output = `📄 FileName: ${fileData.FileName}\n`;
-
+console.log("Shpow res fun 3"+bodyDataInfo[0].tagName);
     for (let groupKey in fileData.values) {
       output += `  🔸 Section: ${groupKey}\n`;
-
+console.log("Shpow res fun 4"+bodyDataInfo[0].tagName);
       fileData.values[groupKey].forEach(entry => {
         for (let key in entry) {
+          console.log("Shpow res fun 5"+bodyDataInfo[0].tagName);
           output += `    - ${key}: ${entry[key]}\n`;
+           const tr = document.createElement("tr");
+            // console.log(fname,k,locKey,"=",x[locKey]);
+                const cells = [fileData.FileName,groupKey,key,entry[key]];
+                console.log("New:",cells);
+                cells.forEach(text => {
+                const td = document.createElement("td");
+                td.textContent = text;
+                tr.appendChild(td);
+                console.log("new tr:",tr,",mn:"+bodyData.length);
+                bodyDataInfo[0].appendChild(tr);
+                });
         }
       });
     }
 
     output += "\n";
-    resultsDiv.innerText += output;
+    // resultsDiv.innerText += output;
   });
+
+
+
+ 
+               
 }

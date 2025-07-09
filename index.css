@@ -35,6 +35,7 @@ input{
     border-radius: 10px;
     color: white;
     position: fixed;
+    z-index: 1;
     width: 100%;
     border: 1px solid;
     top: 0px;
@@ -194,9 +195,9 @@ color: darkgoldenrod;
     width: 10%;
     padding: 10px;
     height: 40px;
-    position: absolute;
+    /* position: absolute;
     top: 16px;
-    right: 55%;
+    right: 55%; */
 }
 #ObjRep>h2{
      text-align: center;
@@ -250,3 +251,26 @@ color: darkgoldenrod;
      color: white;
      box-shadow: 1px 1px 5px rgb(205, 28, 28);
     }
+#fileList{
+   /* border: 1px solid; */
+   min-width: 30%;
+   margin: 30px 0px 0px 10%;
+   position: absolute;
+   background-color: white;
+}
+#fileList>div{
+    /* border: 1px solid; */
+    padding: 10px 5px;
+    background-color: transparent;
+    cursor: pointer;
+    
+}
+#selectedFiles{
+    margin-left: 10%;
+}
+#selectedFiles>span{
+    margin-right: 10px;
+}
+#selectedFiles>span>span{
+    cursor: pointer;
+}
